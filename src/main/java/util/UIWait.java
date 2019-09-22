@@ -27,7 +27,7 @@ public class UIWait {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			status = true;
 		} catch (TimeoutException e) {
-			log.debug("Element not visible - " + e);
+			log.debug("models.Element not visible - " + e);
 		}
 		return status;
 
@@ -40,7 +40,7 @@ public class UIWait {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			status = true;
 		} catch (TimeoutException e) {
-			log.debug("Element not clickable - " + e);
+			log.debug("models.Element not clickable - " + e);
 		}
 		return status;
 

@@ -1,0 +1,4 @@
+22/09/2019 10:36:52 INFO  (EventHandler.java:105)   - Typed on element - Login:USERNAME FIELD
+22/09/2019 10:36:52 INFO  (EventHandler.java:105)   - Typed on element - Login:PASSWORD FIELD
+22/09/2019 10:37:08 INFO  (EventHandler.java:94)   - Clicked on button - Login:LOGIN BUTTON
+22/09/2019 10:37:18 INFO  (EventHandler.java:94)   - Clicked on button - LiveRentals:MENU

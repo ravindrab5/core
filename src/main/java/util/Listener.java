@@ -24,7 +24,6 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import com.yantra.serviceportal.model.TestCase;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -151,14 +150,14 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 		}
 		params += ")";
 		
-		 TestCase testcase = TestScriptMetaData.getTestCase();
-		 
-		 String testname=testcase.getName()+params;
-		 System.out.println("Test case name - "+testname);
-		 
-		 logger = ExtentTestManager.startTest(testname);
-		 logger.log(LogStatus.INFO, testcase.getDescription());
-		 logger.log(LogStatus.INFO, "=======================================");
+//		 TestCase testcase = TestScriptMetaData.getTestCase();
+//
+//		 String testname=testcase.getName()+params;
+//		 System.out.println("Test case name - "+testname);
+//
+//		 logger = ExtentTestManager.startTest(testname);
+//		 logger.log(LogStatus.INFO, testcase.getDescription());
+//		 logger.log(LogStatus.INFO, "=======================================");
 
 	}
 	// This belongs to ITestListener and will execute only if any of the main
