@@ -1,0 +1,8 @@
+{
+  "implicitTimeouts":30,
+  "uiWaitTimeout":30,
+  "screenshots":"./screenshots",
+  "results_path":"./Results"
+
+
+}

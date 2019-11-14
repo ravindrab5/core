@@ -1,4 +1,18 @@
-22/09/2019 10:36:52 INFO  (EventHandler.java:105)   - Typed on element - Login:USERNAME FIELD
-22/09/2019 10:36:52 INFO  (EventHandler.java:105)   - Typed on element - Login:PASSWORD FIELD
-22/09/2019 10:37:08 INFO  (EventHandler.java:94)   - Clicked on button - Login:LOGIN BUTTON
-22/09/2019 10:37:18 INFO  (EventHandler.java:94)   - Clicked on button - LiveRentals:MENU
+14/11/2019 22:07:58 INFO  (ArgumentHandler.java:32)   - Setting commandline options --------- 
+14/11/2019 22:07:58 INFO  (ArgumentHandler.java:122)   - Test run set options : 
+
+{
+	browser:	chrome,
+	run_env:	local,
+	os:	windows,
+	mobile_web:	null,
+	mobile_native:	null,
+	testngxml:	testng,
+	extend_report:	null,
+	testrail_trun_name:	null,
+	isHeadles:	false,
+	isApiTest:	false
+}
+14/11/2019 22:08:15 INFO  (EventHandler.java:102)   - Typed on element - Login:USERNAME FIELD
+14/11/2019 22:08:15 INFO  (EventHandler.java:102)   - Typed on element - Login:PASSWORD FIELD
+14/11/2019 22:08:38 INFO  (EventHandler.java:91)   - Clicked on button - Login:LOGIN BUTTON
