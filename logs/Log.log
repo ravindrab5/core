@@ -1,5 +1,5 @@
-14/11/2019 22:07:58 INFO  (ArgumentHandler.java:32)   - Setting commandline options --------- 
-14/11/2019 22:07:58 INFO  (ArgumentHandler.java:122)   - Test run set options : 
+15/11/2019 07:34:29 INFO  (ArgumentHandler.java:32)   - Setting commandline options --------- 
+15/11/2019 07:34:29 INFO  (ArgumentHandler.java:122)   - Test run set options : 
 
 {
 	browser:	chrome,
@@ -13,6 +13,8 @@
 	isHeadles:	false,
 	isApiTest:	false
 }
-14/11/2019 22:08:15 INFO  (EventHandler.java:102)   - Typed on element - Login:USERNAME FIELD
-14/11/2019 22:08:15 INFO  (EventHandler.java:102)   - Typed on element - Login:PASSWORD FIELD
-14/11/2019 22:08:38 INFO  (EventHandler.java:91)   - Clicked on button - Login:LOGIN BUTTON
+15/11/2019 07:34:41 INFO  (EventHandler.java:91)   - Clicked on button - php_travels_home:MY ACCOUNT DROPDOWN
+15/11/2019 07:34:42 INFO  (EventHandler.java:91)   - Clicked on button - php_travels_home:LOGIN LINK
+15/11/2019 07:34:42 INFO  (EventHandler.java:102)   - Typed on element - php_travels_login:USERNAME FIELD
+15/11/2019 07:34:42 INFO  (EventHandler.java:102)   - Typed on element - php_travels_login:PASSWORD FIELD
+15/11/2019 07:34:42 INFO  (EventHandler.java:91)   - Clicked on button - php_travels_login:LOGIN BUTTON

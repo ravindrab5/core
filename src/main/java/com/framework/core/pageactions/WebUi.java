@@ -63,5 +63,25 @@ public class WebUi {
         webelement.sendKeys(text);
     }
 
+    public static String getText(String elementname){
+        //logger.info("Typing text on - "+element.getUiName(elementname) );
+        String next_page=element.getNextPage(elementname);
+        WebElement webelement=element.getElement(elementname);
+        UiNameHandler.putUiELement(webelement,next_page+":"+element.getUiName(elementname));
+
+        wait.waitTillElementVisibility(webelement);
+        wait.waitTillElementClickable(webelement);
+
+        return webelement.getText();
+        //webelement.sendKeys(text);
+    }
+
+    public static void  pauseExecution(int milliseconds){
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
