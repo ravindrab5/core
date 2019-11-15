@@ -14,8 +14,8 @@ public class LogInitilizer {
 
 		synchronized (LogInitilizer.class) {
 			if (instance == null) {
-				String path = new ResourceUtil().getFile("log4j.properties").getAbsolutePath();
-				PropertyConfigurator.configure(path);
+				//String path = new ResourceUtil().getFile("log4j.properties").getAbsolutePath();
+				PropertyConfigurator.configure(new ResourceUtil().getFileAsStream("log4j.properties"));
 				instance = Logger.getLogger("Logger");
 				System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
 				instance.debug("Debug Log is initialized");
