@@ -18,7 +18,7 @@ public class ExtentTestManager {
 
 	public static synchronized ExtentTest startTest(String testName, String description) {
 		ExtentTest testRep = report.startTest(testName, description);
-		System.out.println("Starting test - "+(int) Thread.currentThread().getId());
+	//	System.out.println("Starting test - "+(int) Thread.currentThread().getId());
 		map.put((int) Thread.currentThread().getId(), testRep);
 		return testRep;
 	}
@@ -28,7 +28,7 @@ public class ExtentTestManager {
 	}
 
 	public static synchronized void endTest() {
-		System.out.println("End Test - "+(int) Thread.currentThread().getId());
+		//System.out.println("End Test - "+(int) Thread.currentThread().getId());
 		int threadId=(int) Thread.currentThread().getId();
 		report.endTest(map.get(threadId));
 		report.flush();

@@ -1,6 +1,7 @@
-package com.framework.core.TestInit;
+package com.framework.core.testInit;
 
 import com.framework.core.models.TestRun;
+import com.framework.core.pageactions.Page;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 /**
@@ -9,5 +10,6 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 public class TestBase {
     public static TestRun testRun;
     protected EventFiringWebDriver driver;
+    protected Page WebUi;
 
 }

@@ -1,10 +1,11 @@
 package com.framework.core.tests;
 
-import com.framework.core.pageactions.Page;
-import com.framework.core.testInit.TestBase;
 import com.framework.core.driverfactory.DriverManagerFactory;
+import com.framework.core.pageactions.Page;
 import com.framework.core.reportlistners.ExtentReportListener;
+import com.framework.core.testInit.TestBase;
 import com.framework.core.util.DataProviderArguments;
+import com.framework.core.util.EventDriver;
 import com.framework.core.util.ReadCSVFile;
 import com.framework.core.util.TestScriptMetaData;
 import org.testng.Assert;
@@ -12,17 +13,16 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import com.framework.core.util.EventDriver;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by Ravindra on 22-09-2019.
+ * Created by Ravindra on 18-11-2019.
  */
-
 @Listeners(ExtentReportListener.class)
-public class TestOne extends TestBase {
+public class TestTwo extends TestBase {
+
 
     @BeforeMethod
     public void setupDriver(Method method){
@@ -30,7 +30,6 @@ public class TestOne extends TestBase {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         WebUi=new Page(driver,"php_travels_home",30);
-        //Page.init(driver,"php_travels_home",30);
         TestScriptMetaData.setTestCaseData(method);
     }
 
@@ -61,7 +60,7 @@ public class TestOne extends TestBase {
             description = "Checks login functionality with invalid inputs",
             dataProvider="CSVData",
             dataProviderClass=ReadCSVFile.class
-         )
+    )
     public void testLoginInvalid(String username,String password,String message){
         WebUi.Navigate("http://www.phptravels.net/");
         WebUi.clickOn("myaccount");

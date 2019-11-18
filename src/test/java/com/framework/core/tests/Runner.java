@@ -1,7 +1,7 @@
 package com.framework.core.tests;
 
 import com.beust.jcommander.internal.Lists;
-import com.framework.core.TestInit.TestBase;
+import com.framework.core.testInit.TestBase;
 import com.framework.core.handlers.ArgumentHandler;
 import com.framework.core.models.TestRun;
 import org.testng.TestNG;

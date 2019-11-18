@@ -1,5 +1,5 @@
-15/11/2019 07:34:29 INFO  (ArgumentHandler.java:32)   - Setting commandline options --------- 
-15/11/2019 07:34:29 INFO  (ArgumentHandler.java:122)   - Test run set options : 
+18/11/2019 22:41:22 INFO  (ArgumentHandler.java:32)   - Setting commandline options --------- 
+18/11/2019 22:41:22 INFO  (ArgumentHandler.java:122)   - Test run set options : 
 
 {
 	browser:	chrome,
@@ -13,8 +13,15 @@
 	isHeadles:	false,
 	isApiTest:	false
 }
-15/11/2019 07:34:41 INFO  (EventHandler.java:91)   - Clicked on button - php_travels_home:MY ACCOUNT DROPDOWN
-15/11/2019 07:34:42 INFO  (EventHandler.java:91)   - Clicked on button - php_travels_home:LOGIN LINK
-15/11/2019 07:34:42 INFO  (EventHandler.java:102)   - Typed on element - php_travels_login:USERNAME FIELD
-15/11/2019 07:34:42 INFO  (EventHandler.java:102)   - Typed on element - php_travels_login:PASSWORD FIELD
-15/11/2019 07:34:42 INFO  (EventHandler.java:91)   - Clicked on button - php_travels_login:LOGIN BUTTON
+18/11/2019 22:41:23 INFO  (ReadCSVFile.java:43)   - Getting data from csv at :./testdata/testLoginInvalid.csv
+18/11/2019 22:41:23 INFO  (ReadCSVFile.java:43)   - Getting data from csv at :./testdata/testLoginInvalid.csv
+18/11/2019 22:41:51 INFO  (EventHandler.java:102)   - Clicked on button - php_travels_home:MY ACCOUNT DROPDOWN
+18/11/2019 22:41:51 INFO  (EventHandler.java:102)   - Clicked on button - php_travels_home:MY ACCOUNT DROPDOWN
+18/11/2019 22:41:53 INFO  (EventHandler.java:102)   - Clicked on button - php_travels_home:LOGIN LINK
+18/11/2019 22:41:53 INFO  (EventHandler.java:102)   - Clicked on button - php_travels_home:LOGIN LINK
+18/11/2019 22:41:53 INFO  (EventHandler.java:113)   - Typed on element - php_travels_login:USERNAME FIELD
+18/11/2019 22:41:54 INFO  (EventHandler.java:113)   - Typed on element - php_travels_login:USERNAME FIELD
+18/11/2019 22:41:54 INFO  (EventHandler.java:113)   - Typed on element - php_travels_login:PASSWORD FIELD
+18/11/2019 22:41:54 INFO  (EventHandler.java:102)   - Clicked on button - php_travels_login:LOGIN BUTTON
+18/11/2019 22:41:54 INFO  (EventHandler.java:113)   - Typed on element - php_travels_login:PASSWORD FIELD
+18/11/2019 22:41:54 INFO  (EventHandler.java:102)   - Clicked on button - php_travels_login:LOGIN BUTTON

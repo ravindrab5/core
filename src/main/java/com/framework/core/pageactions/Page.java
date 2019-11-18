@@ -13,27 +13,27 @@ import com.framework.core.util.UIWait;
  * Created by Ravindra on 20-09-2019.
  */
 
-public class WebUi {
+public class Page {
 
-    private static WebElementHandler element;
-    private static EventFiringWebDriver driver;
-    private static Logger logger;
-    private static String currentPage;
-    private static UIWait wait;
+    private WebElementHandler element;
+    private EventFiringWebDriver driver;
+    private Logger logger;
+    private String currentPage;
+    private UIWait wait;
 
-    public static void init(EventFiringWebDriver driver,String page,int ui_wait_duration){
-        WebUi.driver=driver;
-        currentPage=page;
-        element=new WebElementHandler(driver,page);
+    public  Page(EventFiringWebDriver driver,String page,int ui_wait_duration){
+        this.driver=driver;
+        this.currentPage=page;
+        this.element=new WebElementHandler(driver,page);
         wait=new UIWait(driver,ui_wait_duration);
         logger= LogInitilizer.getLogger();
     }
 
-    public static void Navigate(String url){
+    public  void Navigate(String url){
         driver.get(url);
-    }
+   }
 
-    public static void clickOn(String elementname){
+    public  void clickOn(String elementname){
 
 
         String next_page=element.getNextPage(elementname);
@@ -51,7 +51,7 @@ public class WebUi {
 
     }
 
-    public static void  typeOn(String elementname,String text){
+    public void typeOn(String elementname,String text){
         //logger.info("Typing text on - "+element.getUiName(elementname) );
         String next_page=element.getNextPage(elementname);
         WebElement webelement=element.getElement(elementname);
@@ -63,7 +63,7 @@ public class WebUi {
         webelement.sendKeys(text);
     }
 
-    public static String getText(String elementname){
+    public String getText(String elementname){
         //logger.info("Typing text on - "+element.getUiName(elementname) );
         String next_page=element.getNextPage(elementname);
         WebElement webelement=element.getElement(elementname);
