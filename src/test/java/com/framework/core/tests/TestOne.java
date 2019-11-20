@@ -21,12 +21,12 @@ import java.util.concurrent.TimeUnit;
  * Created by Ravindra on 22-09-2019.
  */
 
-@Listeners(ExtentReportListener.class)
+//@Listeners(ExtentReportListener.class)
 public class TestOne extends TestBase {
 
     @BeforeMethod
     public void setupDriver(Method method){
-        driver= EventDriver.getEventFiringWebDriver(DriverManagerFactory.getManager(testRun.getBrowser(),testRun.getRun_env()).getDriver());
+        driver= EventDriver.getEventFiringWebDriver(DriverManagerFactory.getManager(testRun).getDriver(),testRun);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         WebUi=new Page(driver,"php_travels_home",30);

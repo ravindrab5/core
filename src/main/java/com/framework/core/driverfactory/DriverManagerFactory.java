@@ -1,13 +1,15 @@
 package com.framework.core.driverfactory;
 
+import com.framework.core.models.TestRun;
+
 public class DriverManagerFactory {
-	public static DriverManager getManager(String type,String run_env) {
+	public static DriverManager getManager(TestRun testRun) {
 
 		DriverManager driverManager = null;
 
-		switch (type) {
+		switch (testRun.getBrowser()) {
 		case "chrome":
-			driverManager = new ChromeDriverManager(run_env);
+			driverManager = new ChromeDriverManager(testRun);
 			break;
 		case "firefox":
 			// driverManager = new FirefoxDriverManager();

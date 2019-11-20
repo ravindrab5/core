@@ -41,8 +41,8 @@ public class ArgumentHandler {
             option.addOption("mobile_native",true,"Set to app_info.json if not passed");
             option.addOption("api",true,"Set to false by default");
             option.addOption("headless",true,"Set to false by default");
-            option.addOption("testngxml",true,"Set to testng.xml by default");
-            option.addOption("extend_report",true,"Set to null by default");
+            option.addOption("testngxml",true,"Set to testplan.xml by default");
+            option.addOption("extent_report",true,"Set to null by default");
             option.addOption("testrail_trun_name",true,"Set to TestRun by default");
 
             CommandLineParser parser = new DefaultParser();
@@ -58,15 +58,17 @@ public class ArgumentHandler {
             mobile_native=cmd.getOptionValue("mobile_native");
             api=cmd.getOptionValue("api");
             headless=Boolean.parseBoolean(cmd.getOptionValue("headless"));
-            testngxml=cmd.getOptionValue("testngxml");
             extend_report=cmd.getOptionValue("extent_report");
+            testngxml=cmd.getOptionValue("testngxml");
+
+            //extend_report=cmd.getOptionValue("extent_report");
             testrail_trun_name=cmd.getOptionValue("testrail_trun_name");
             }catch (Exception e){
                 logger.info("Exception - "+e);
 
             }
 
-
+            //logger.info("Value of extent report  -" +extend_report);
             if(web_browser==null && mobile_web==null && mobile_native==null && api==null){
                 logger.info("Either of web_browser / mobile_web / mobile_native / api not passed in command line");
                 System.exit(0);

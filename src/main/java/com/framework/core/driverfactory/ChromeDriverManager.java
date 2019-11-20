@@ -3,6 +3,7 @@ package com.framework.core.driverfactory;
 import java.io.File;
 import java.net.MalformedURLException;
 
+import com.framework.core.models.TestRun;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -12,10 +13,10 @@ import com.framework.core.util.ResourceUtil;
 
 public class ChromeDriverManager extends DriverManager{
 	private ChromeDriverService chService;
-	private String run_env;
-
-	public ChromeDriverManager(String run_env){
-		this.run_env=run_env;
+	private TestRun testRun;
+	public ChromeDriverManager(TestRun testRun)
+	{
+		this.testRun=testRun;
 	}
 
 	@Override
@@ -44,9 +45,14 @@ public class ChromeDriverManager extends DriverManager{
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("test-type");
+
+		if(testRun.isHeadles()){
+			options.addArguments("--headless");
+		}
+
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
-		if(run_env.equals("local")) {
+		if(testRun.getRun_env().equals("local")) {
 			String url="http://localhost:4444/wd/hub";
 			try {
 				driver = new RemoteWebDriver(new java.net.URL(url), capabilities);
