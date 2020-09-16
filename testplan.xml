@@ -6,7 +6,7 @@
   <test name="Test_1">
     <classes>
       <class name="com.framework.core.tests.TestOne"/>
-      <class name="com.framework.core.tests.TestTwo"/>
+      <class name="com.framework.core.tests.TestTwo1"/>
     </classes>
   </test> <!-- Test -->
 
